@@ -1,315 +1,296 @@
-*,*::before,*::after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #333;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #333;
 }
 
 /* Loader Styles */
 .loader-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
 .loader {
-    border: 8px solid #f3f3f3;
-    border-top: 8px solid #3498db;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .content {
-    display: none;
+  display: none;
 }
-
 
 #main {
-    color: white;
-    font-size: 15px;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-  }
-
-
-
-.logo{
-    width: 60px;
+  position: relative;
+  color: white;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
 }
 
-header{
-    position: absolute;
-    z-index: 9999;
-    width: 100%;
-    padding: 0.9rem 0;
-    top: 0;
-    left 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.logo {
+  width: 60px;
 }
 
-header nav{
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  padding: 0.9rem 0;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-header ul{
-    display:flex;
-    list-style: none;
-    align-items: center;
+header nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header ul a{
-    text-decoration: none;
-    color: white;
-    padding: 0 1.5rem;
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 0.83rem;
+header ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
 }
 
-.github a{
-    font-size: 1.05rem;
-    padding: 0 3rem;
-}
-.hamburger{
-    padding-left: 1.5rem;
-}
-
-/* .hamburger a{
-    padding: 0;
-    width: 37px;
-    height: 37px;
-    display: flex;
-    border-radius: 50%;
-    background-color: rgba(115, 115, 115, 0.7);
-    background-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    justify-content: center;
-    align-items: center;
-} */
-
-.hamburger .bar{
-    position: relative;
-    width: 100%; height: 2px;
-    background-color: white;
-    border-radius: 2px;
+header ul a {
+  text-decoration: none;
+  color: white;
+  padding: 0 1.5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.83rem;
 }
 
-.hamburger .bar::before, 
-.hamburger .bar::after{
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    background-color: inherit;
-    border-radius: 2px;
+.github a {
+  font-size: 1.05rem;
+  padding: 0 3rem;
+}
+.hamburger {
+  padding-left: 1.5rem;
 }
 
-.hamburger .bar::before{
-    top: -6px;
+.hamburger .bar {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
 }
 
-.hamburger .bar::after{
-    top: 6px;
+.hamburger .bar::before,
+.hamburger .bar::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: 2px;
 }
 
-main{
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+.hamburger .bar::before {
+  top: -6px;
 }
 
-.parallax{
-    pointer-events: none;
-    transition: 0.35s cubic-bezier(.2,.49,.32,.99);
+.hamburger .bar::after {
+  top: 6px;
 }
 
+main {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.parallax {
+  pointer-events: none;
+  transition: 0.35s cubic-bezier(0.2, 0.49, 0.32, 0.99);
+}
 
 .bg-img {
-    position: absolute;
-    width: 150%;
-    top: calc(50%);
-    left: calc(50%);
-    z-index: 1;
+  position: absolute;
+  height: 190%;
+  top: -30%;
+  left: -50%;
+  z-index: 1;
 }
 
-.moon{
-    position: absolute;
-    width: 120%;
-    top: 24%;
-    left: 40%;
-    z-index: 2;
+.moon {
+  position: absolute;
+  width: 60%;
+  top: -40%;
+  left: 0;
+  z-index: 2;
 }
 
-.planet{
-    position: absolute;
-    width: 85%;
-    top: 30%;
-    left: 70%;
-    z-index: 3;
+.planet {
+  position: absolute;
+  width: 20%;
+  top: -2%;
+  left: 60%;
+  z-index: 3;
 }
 
-.cloud_1{
-    position: absolute;
-    width: 80%;
-    top: 45%;
-    left: 80%;
-    z-index: 4;
+.cloud_1 {
+  position: absolute;
+  width: 60%;
+  top: 1%;
+  left: -15%;
+  z-index: 4;
 }
 
-.cloud_2{
-    position: absolute;
-    width: 70%;
-    top: 30%;
-    left: 20%;
-    z-index: 5;
+.cloud_2 {
+  position: absolute;
+  width: 70%;
+  top: -10%;
+  left: 50%;
+  z-index: 5;
 }
 
-
-
-.building_1{
-    position: absolute;
-    width: 35%;
-    top: 75%;
-    left: 100%;
-    z-index: 7;
+.building_1 {
+  position: absolute;
+  width: 40%;
+  top: 40%;
+  left: 60%;
+  z-index: 7;
 }
 
-
-
-.building_2{
-    position: absolute;
-    width: 50%;
-    top: 85%;
-    left: 45%;
-    z-index: 8;
+.building_2 {
+  position: absolute;
+  width: 50%;
+  top: 60%;
+  left: 35%;
+  z-index: 8;
 }
 
-.text{
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    text-align: center;
-    white-space: nowrap;
-    text-transform: uppercase;
-    color: white;
-    z-index: 9;
-    pointer-events:all;
+.text {
+  position: absolute;
+  top: 50%;
+  /* transform: translate(-50%, -50%); */
+  left: 30%;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: white;
+  z-index: 9;
+  pointer-events: all;
 }
 
-.text h1{
-    font-weight: 800 ;
-    font-size: 6rem;
-    line-height: 0.88;
+.text h1 {
+  font-weight: 800;
+  font-size: 6rem;
+  line-height: 0.88;
 }
 
-
-.text h2{
-    font-weight: 100;
-    font-size: 3.5rem;
-    line-height: 0.88;
+.text h2 {
+  font-weight: 100;
+  font-size: 3.5rem;
+  line-height: 0.88;
 }
 
-.fog_1{
-    position: absolute;
-    width: 110%;
-    top: 90%;
-    left: 80%;
-    z-index: 10;
+.fog_1 {
+  position: absolute;
+  width: 110%;
+  top: 90%;
+  left: 80%;
+  z-index: 10;
 }
 
-
-.spaceship{
-    position: absolute;
-    width: 30%;
-    top: 30%;
-    left: 80%;
-    z-index: 11;
+.spaceship {
+  position: absolute;
+  width: 30%;
+  top: 20%;
+  left: 60%;
+  z-index: 11;
 }
 
-
-.building_3{
-    position: absolute;
-    width: 80%;
-    top: 65%;
-    left: 5%;
-    z-index: 12;
+.building_3 {
+  position: absolute;
+  width: 80%;
+  top: 25%;
+  left: -40%;
+  z-index: 12;
 }
 
-.fog_2{
-    position: absolute;
-    width: 100%;
-    top: 95%;
-    left: 20%;
-    z-index: 13;
+.fog_2 {
+  position: absolute;
+  width: 100%;
+  top: 95%;
+  left: 20%;
+  z-index: 13;
 }
 
-
-.building_4{
-    position: absolute;
-    width: 50%;
-    top: 80%;
-    left: 78%;
-    z-index: 13;
-
+.building_4 {
+  position: absolute;
+  width: 50%;
+  top: 80%;
+  left: 78%;
+  z-index: 13;
 }
 
-.building_5{
-    position: absolute;
-    width: 40%;
-    top: 70%;
-    left: 20%;
-    z-index: 14;
+.building_5 {
+  position: absolute;
+  width: 40%;
+  bottom: -20%;
+  left: 0;
+  z-index: 14;
 }
 
-.fog_3{
-    opacity: 0.5;
-    position: absolute;
-    width: 150%;
-    top: 90%;
-    left: 50%;
-    z-index: 15;
+.fog_3 {
+  opacity: 0.5;
+  position: absolute;
+  width: 50%;
+  bottom: -60%;
+  left: 10%;
+  z-index: 15;
 }
 
-.rocks_1{
-    position: absolute;
-    width: 80%;
-    top: 80%;
-    left: 10%;
-    z-index: 18;
+.rocks_1 {
+  position: absolute;
+  width: 60%;
+  bottom: -3%;
+  left: -10%;
+  z-index: 18;
 }
 
-.rocks_2{
-    position: absolute;
-    width: 70%;
-    top: 55%;
-    left: 77%;
-    z-index: 19;
+.rocks_2 {
+  position: absolute;
+  width: 40%;
+  bottom: -3%;
+  right: -10%;
+  z-index: 19;
 }
-
