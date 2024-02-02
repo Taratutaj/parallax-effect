@@ -1,6 +1,6 @@
 # Parallax-effect hero section
 
-### [Live Site] (https://taratutaj.github.io/parallax-effect/)
+### [Live Site](https://taratutaj.github.io/parallax-effect/)
 
 ## Project Overview
 This project is a simple web page hero section created using JavaScript and the GSAP (GreenSock Animation Platform) library. The hero section features a captivating parallax effect to enhance the visual appeal. The graphic elements were crafted using Midjourney.
